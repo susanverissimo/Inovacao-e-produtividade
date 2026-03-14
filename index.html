@@ -54,6 +54,22 @@
   .nav-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
   .nav-links a:hover { color: var(--text); }
 
+  /* PUBLICAÇÕES */
+  .pub-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 16px; }
+  .pub-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .pub-tag { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .4px; background: var(--green-light); color: var(--green-dark); padding: 3px 10px; border-radius: 99px; }
+  .pub-year { font-size: 12px; color: var(--text-hint); }
+  .pub-title { font-size: 16px; font-weight: 500; margin-bottom: 4px; line-height: 1.4; }
+  .pub-authors { font-size: 12px; color: var(--text-hint); margin-bottom: 10px; }
+  .pub-resumo { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 10px; }
+  .pub-keywords { font-size: 11px; color: var(--text-hint); margin-bottom: 14px; }
+  .pub-btn { font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; color: var(--green-dark); background: var(--green-light); border: none; padding: 6px 14px; border-radius: 99px; cursor: pointer; transition: background .15s; }
+  .pub-btn:hover { background: #c5ede0; }
+  .artigo-full { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+  .artigo-section { margin-bottom: 1.25rem; }
+  .artigo-section-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+  .artigo-section p { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 8px; }
+
   /* HERO */
   .hero {
     max-width: 900px; margin: 0 auto;
@@ -232,6 +248,7 @@
   <div class="nav-links">
     <a href="#cases">Cases</a>
     <a href="#sobre">Sobre</a>
+    <a href="#publicacoes">Publicações</a>
     <a href="#contato">Contato</a>
   </div>
 </nav>
@@ -377,8 +394,8 @@
 
     <div class="case-card" data-tipo="processos">
       <span class="case-tag tag-processos">Logística · Comercial</span>
-      <div class="case-title">CVEXLog Transporte</div>
-      <div class="case-sub">Betim, MG · ME · Jan–Jun 2025</div>
+      <div class="case-title">Transportadora e Logística</div>
+      <div class="case-sub">Contagem, MG · ME · Jan–Jun 2025</div>
       <div class="case-desc">Transportadora com pouco mais de 2 anos de mercado, gestão manual e dificuldade em converter prospecção em vendas. Processos dependentes de planilhas e ausência de controle financeiro estruturado.</div>
       <div class="case-metrics">
         <div class="metric"><div class="metric-val">+41%</div><div class="metric-label">Produtividade</div></div>
@@ -424,6 +441,105 @@
   </div>
 </section>
 
+<!-- PUBLICAÇÕES -->
+<section id="publicacoes">
+  <div class="section-header">
+    <div class="section-title">Publicações</div>
+    <div class="section-sub">Estudos de caso e artigos acadêmicos</div>
+  </div>
+  <div id="pub-list">
+
+    <div class="pub-card">
+      <div class="pub-meta">
+        <span class="pub-tag">Estudo de caso</span>
+        <span class="pub-year">2025</span>
+      </div>
+      <div class="pub-title">Gestão Financeira e de Estoque como Pilar para o Aumento da Produtividade no Varejo</div>
+      <div class="pub-authors">Susan Veríssimo Vasconcellos · Bacharel em Administração de Empresas · Centro Universitário SENAC<br>Orientador: Tiago Simão Ferreira · Doutor em Engenharia · IFMG</div>
+      <div class="pub-resumo">Análise da aplicação de práticas de gestão financeira e de estoque em microempresa do varejo de calçados em Juatuba (MG). O estudo demonstra como a gestão orientada por dados pode contribuir para o aumento da produtividade e sustentabilidade financeira de micro e pequenas empresas.</div>
+      <div class="pub-keywords">Gestão de estoque · Gestão financeira · Capital de giro · Produtividade · MPEs</div>
+      <button class="pub-btn" onclick="toggleArtigo('artigo1')">Ler estudo de caso ↓</button>
+
+      <div id="artigo1" class="artigo-full" style="display:none">
+        <div class="artigo-section">
+          <div class="artigo-section-title">Resumo</div>
+          <p>Este estudo de caso analisa a aplicação de práticas de gestão financeira e de estoque como estratégia para aumento da produtividade em uma microempresa do varejo de calçados localizada em Juatuba (MG). A empresa, denominada Empire Shoes, iniciou suas atividades no ambiente digital e, após crescimento da demanda, expandiu suas operações para o varejo físico. Com a expansão, surgiram desafios relacionados à gestão do capital de giro, organização do estoque e formação adequada de preços, resultando em dificuldades para manter a liquidez financeira e planejar o crescimento do negócio. A partir da participação no Programa ALI Produtividade, foi realizado um diagnóstico estruturado por meio do Radar de Inovação, que evidenciou fragilidades na organização das informações financeiras e operacionais. Como resposta ao dilema identificado, foram implementadas ações voltadas à organização dos dados gerenciais, revisão da precificação baseada em markup, controle do estoque, definição de indicadores financeiros e planejamento comercial orientado por dados. Também foram realizadas intervenções comerciais voltadas ao aumento do giro de mercadorias e à melhoria da exposição de produtos no ponto de venda. Os resultados indicaram avanços na maturidade gerencial da empresa, melhoria na organização das rotinas operacionais e crescimento do indicador de produtividade, calculado a partir da relação entre margem de contribuição e número de pessoas ocupadas. O caso evidencia que a gestão orientada por dados pode contribuir significativamente para o aumento da produtividade e para a sustentabilidade financeira de micro e pequenas empresas no varejo.</p>
+          <p><em>Palavras-chave: Gestão de estoque; Gestão financeira; Capital de giro; Produtividade; Micro e pequenas empresas.</em></p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">1. Introdução</div>
+          <p>A Empire Shoes teve início no ambiente doméstico, em 2019, com vendas realizadas exclusivamente pela internet, conciliando a atividade empresarial com as responsabilidades familiares. Gradualmente, o negócio passou a ganhar reconhecimento pela curadoria diferenciada dos produtos, pela constante introdução de novos modelos, pela oferta de encomendas personalizadas e pela agilidade na entrega. Esse conjunto de fatores contribuiu para o aumento da demanda e para a consolidação da marca junto ao público local.</p>
+          <p>Diante do crescimento, em 2020, a empresária decidiu formalizar a expansão por meio da abertura de uma loja física no centro da cidade. O desempenho inicial foi positivo e, pouco tempo depois, surgiu a oportunidade de transferir o ponto comercial para uma loja com posicionamento melhor, localizada na principal avenida do centro da cidade. A mudança fortaleceu a visibilidade da marca e ampliou o fluxo de clientes.</p>
+          <p>Até então enquadrada como Microempreendedora Individual (MEI), a empresária passou a observar um aumento no faturamento que a aproximava do limite legal da categoria. Concomitantemente à mudança, o crescimento das vendas para pronta entrega exigia maior volume de compras e ampliação do estoque, o que trouxe novos desafios relacionados à gestão do fluxo de caixa e à manutenção do capital de giro. O crescimento, que inicialmente representava expansão e oportunidade, passou a demandar maior estrutura e controle.</p>
+          <p>Nesse contexto, tornou-se evidente a dificuldade em organizar, interpretar e utilizar os dados financeiros e operacionais da empresa para fundamentar decisões estratégicas. Embora já utilizasse um sistema de gestão (ERP), seu uso era limitado e pouco integrado à rotina decisória. A empresária reconheceu que grande parte de seu tempo estava dedicado às atividades operacionais, com pouca disponibilidade para uma gestão estruturada. O processo de desenquadramento do MEI coincidiu com esse momento de inflexão, marcando também o ingresso da empresa no Programa ALI Produtividade como estratégia para reorganizar a gestão e sustentar o crescimento de forma estruturada.</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">2. Contexto e Dilema</div>
+          <p>No Brasil, micro e pequenas empresas representam uma das principais forças da economia, tanto na geração de empregos quanto na dinamização dos mercados locais. Entretanto, o crescimento dessas organizações nem sempre ocorre de forma estruturada. Estudos recentes destacam que a gestão inadequada pode levar ao acúmulo de produtos obsoletos e a perdas financeiras significativas, ao passo que práticas eficientes contribuem para a redução de custos e melhoram o nível de serviço ao cliente (DANDARO; MARTELLO, 2015).</p>
+          <p>Embora existam oportunidades relevantes para esse segmento — como proximidade com o cliente, flexibilidade e capacidade de adaptação rápida — os entraves estruturais limitam o crescimento. Dados do Sebrae apontam que desafios como dificuldade de acesso ao crédito, burocracia mesmo no regime simplificado e lacunas no conhecimento em gestão financeira continuam sendo entraves recorrentes ao crescimento estruturado das micro e pequenas empresas (SEBRAE, 2024).</p>
+          <p>Uma pesquisa recente do governo federal reforça esse cenário ao indicar que 38% dos empresários apontam a gestão financeira como sua maior dificuldade gerencial, evidenciando que o problema muitas vezes não está na ausência de mercado, mas na capacidade de gerir os recursos disponíveis (BRASIL, 2026).</p>
+          <p>Esse contexto se torna ainda mais complexo quando empresas que nasceram no ambiente digital decidem migrar para o varejo físico. A transição, frequentemente vista como símbolo de expansão, traz consigo aumento de custos fixos — como aluguel e encargos trabalhistas — além da necessidade de manter estoque para pronta entrega. Dados do estudo sobre maturidade digital dos pequenos negócios divulgado pelo SEBRAE mostram que em 2024, o Brasil registrou 2,4 milhões de fechamentos de pequenos negócios. A principal causa de falha na transição é o desequilíbrio financeiro causado pelos custos fixos que não existiam no modelo 100% digital (SEBRAE, 2024).</p>
+          <p>É nesse cenário que se insere a Empire Shoes, localizada em Juatuba (MG), município com ambiente econômico favorável ao varejo, caracterizado por Produto Interno Bruto (PIB) superior a R$ 2 bilhões, renda média formal acima de R$ 3 mil e ambiente regulatório simplificado. O ambiente de negócios é favorecido por uma gestão pública engajada, contando com a implementação da Lei de Liberdade Econômica, adesão à Rede SIM e o funcionamento da Sala Mineira do Empreendedor (SEBRAE, 2026).</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">2.1 Diagnóstico e Priorização do Desafio</div>
+          <p>Após a contextualização do cenário e da situação da empresa, a primeira ferramenta aplicada na jornada foi o Radar de Inovação, utilizado como instrumento estruturado de diagnóstico. O objetivo foi ampliar a percepção da empresária sobre a realidade do negócio, organizando evidências e reduzindo a subjetividade das análises.</p>
+          <p>O Radar de Inovação é uma ferramenta utilizada na metodologia ALI Produtividade para avaliar o nível de maturidade da empresa em diferentes dimensões de gestão e inovação, permitindo identificar prioridades de melhoria e orientar a definição dos desafios estratégicos do negócio (SEBRAE, 2025).</p>
+          <p>Durante a aplicação do diagnóstico, tornaram-se transparentes alguns pontos centrais: subutilização do ERP, apesar de sua robustez; inconsistências entre estoque físico e sistema; ausência de metas e indicadores financeiros estruturados; falta de análise de margem por produto; inexistência de controle estratégico da curva ABC; decisões de compra baseadas predominantemente em percepção empírica.</p>
+          <p>A análise do radar inicial evidenciou que os principais desafios estavam associados à organização das informações financeiras, à ausência de indicadores gerenciais e à falta de integração entre os dados de vendas, estoque e precificação. Esses fatores contribuíam para decisões de compra e formação de preços baseadas predominantemente em percepção empírica, dificultando a gestão eficiente do estoque e do fluxo financeiro.</p>
+          <p>Embora todos os desafios apresentassem relevância, a análise comparativa — considerando gravidade, urgência, tendência de piora e impacto no cliente — indicou que o desafio relacionado à desorganização das informações financeiras e de estoque possuía maior efeito sistêmico sobre o desempenho da empresa.</p>
+          <p>Os impactos eram evidentes: ausência de clareza sobre margens de lucro, decisões de compra intuitivas, estoque elevado, descasamento financeiro recorrente e dificuldade de planejar o crescimento. A empresa vendia, mas não tinha segurança sobre quanto efetivamente lucrava.</p>
+          <p>Diante desse cenário, o dilema central ficou evidente: como estruturar a gestão financeira e de estoque de forma estratégica, transformando dados dispersos em indicadores gerenciais capazes de sustentar o capital de giro, aprimorar a precificação e elevar a produtividade de maneira sustentável?</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">3. Solucionando o Dilema</div>
+          <p>A solução estruturada para o dilema foi organizada em dois eixos estratégicos complementares: (i) ações voltadas à organização financeira e controle de custos e (ii) ações orientadas ao aumento de faturamento e giro de estoque. Essa divisão permitiu atuar simultaneamente na causa estrutural do problema e nos seus efeitos imediatos.</p>
+          <p><strong>3.1 Solução 1: Estruturação Financeira e Controle de Custos</strong></p>
+          <p>A primeira solução concentrou-se na reorganização da base gerencial da empresa, com foco na redução de riscos financeiros e melhoria do capital de giro. Foi realizada a atualização completa do estoque no sistema ERP, equalizando estoque físico e digital. Essa ação permitiu identificar mercadorias paradas, inconsistências de registro e volume real de capital imobilizado. A partir dessa etapa, os relatórios passaram a refletir a realidade do negócio, eliminando decisões baseadas em estimativas.</p>
+          <p>Os custos foram organizados e classificados entre fixos e variáveis, permitindo a construção de um Demonstrativo de Resultado de Exercício (DRE) simplificado e análise de margem de contribuição e lucratividade bruta. Com a aplicação da metodologia de markup, a empresa passou a precificar considerando cobertura de custos e margem desejada, reduzindo riscos de prejuízo oculto.</p>
+          <p>A participação em consultoria financeira complementou o processo, resultando na definição de: ponto de equilíbrio mensal; faturamento mínimo necessário; valor máximo recomendado de estoque; e parâmetros para controle de capital de giro. Esses indicadores passaram a orientar decisões de compra e metas comerciais.</p>
+          <p>Com base nos novos dados, foram estabelecidas metas semanais de vendas e acompanhamento de ticket médio. A empresa deixou de operar de forma reativa e passou a atuar com maior previsibilidade, reduzindo urgências e melhorando a eficiência operacional.</p>
+          <p><strong>3.2 Solução 2: Estratégias de Aumento de Faturamento e Giro</strong></p>
+          <p>Paralelamente à organização estrutural, foram implementadas ações voltadas à geração de receita e regularização do estoque. Com base na análise de produtos mais vendidos e de maior margem, a empresa reorganizou a exposição dos itens na loja física. Foi instalada iluminação em LED nas prateleiras para valorizar produtos com menor destaque visual, melhorando a percepção de valor e reduzindo custo energético.</p>
+          <p>Diante do volume elevado de mercadorias e da proximidade da Black Friday, foram estruturadas campanhas de venda com base na margem real dos produtos. Diferentemente de liquidações anteriores, as promoções foram conduzidas com consciência financeira, considerando impactos no fluxo de caixa e no capital de giro. Essas ações permitiram reduzir estoque, liberar capital imobilizado e melhorar a liquidez da empresa.</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">4. Participação do SEBRAE e dos Parceiros</div>
+          <p>A solução implementada contou com apoio complementar de serviços oferecidos pelo Sebrae. A participação em consultoria financeira foi fundamental para aprofundar o entendimento da empresária sobre estrutura de custos fixos e variáveis, margem de contribuição, ponto de equilíbrio, capital de giro e fluxo de caixa.</p>
+          <p>A consultoria de crédito consciente complementou a análise financeira ao abordar o uso estratégico de capital de terceiros, discutindo avaliação da real necessidade de crédito, impacto do endividamento sobre o fluxo de caixa, planejamento de uso de recursos externos e formas de autofinanciamento.</p>
+          <p>A atuação integrada entre a jornada ALI Produtividade e as consultorias especializadas demonstrou a importância do encadeamento de soluções. Enquanto o ALI estruturou o diagnóstico, a priorização e o plano de implementação, as consultorias forneceram aprofundamento técnico específico, fortalecendo a qualidade das decisões gerenciais.</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">5. Resultados</div>
+          <p>O presente estudo de caso demonstrou que desafios enfrentados por micro e pequenas empresas nem sempre estão relacionados à ausência de mercado, mas frequentemente à dificuldade de estruturar a gestão do negócio de forma estratégica. No caso da Empire Shoes, o dilema inicial estava associado à limitação do capital de giro e à dificuldade da empresária em organizar, interpretar e utilizar informações financeiras e operacionais como base para a tomada de decisões.</p>
+          <p>Apesar de apresentar demanda constante e bom posicionamento comercial, a empresa operava com volume elevado de capital imobilizado em estoque, precificação pouco estruturada e decisões de compra baseadas predominantemente em percepção empírica. A ausência de indicadores gerenciais dificultava a compreensão das margens de lucratividade, do fluxo financeiro e da real capacidade de crescimento do negócio.</p>
+          <p>Os resultados obtidos ao longo da jornada evidenciam avanços relevantes nas dimensões relacionadas aos controles gerenciais, processos operacionais e práticas de marketing. A comparação entre o diagnóstico inicial e o radar final demonstra que a empresa ampliou sua maturidade gerencial, passando a utilizar ferramentas de controle e planejamento de forma mais estruturada.</p>
+          <p>O indicador de produtividade demonstrou crescimento consistente ao longo do período de acompanhamento, indicando que a empresa passou a gerar maior volume de resultado operacional sem aumento proporcional na quantidade de pessoas ocupadas. O pico de R$13.000 por pessoa ocupada representou crescimento de 30% em relação ao valor de referência inicial.</p>
+          <p>Além dos indicadores quantitativos, a percepção da própria empresária reforça os resultados: maior clareza sobre os números do negócio, aumento da segurança na formação de preços, melhoria na organização do estoque e ampliação da capacidade de planejamento das compras e vendas.</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">6. Conclusão</div>
+          <p>De forma geral, o caso demonstra que a gestão orientada por dados, mesmo em empresas de pequeno porte, pode gerar impactos relevantes na produtividade e na sustentabilidade do negócio. Ao transformar informações financeiras e operacionais dispersas em indicadores gerenciais úteis para a tomada de decisão, a empresa passou a alinhar suas estratégias comerciais e financeiras, criando condições mais sólidas para um crescimento estruturado e financeiramente sustentável.</p>
+          <p>A participação no Programa ALI Produtividade foi determinante para esse processo, ao oferecer metodologia, acompanhamento técnico e ferramentas de gestão que auxiliaram a empresária a compreender melhor a dinâmica financeira do negócio e a estruturar práticas gerenciais mais consistentes. O apoio do Sebrae permitiu organizar informações que antes eram utilizadas de forma intuitiva, possibilitando decisões mais seguras relacionadas à precificação, controle de estoque e planejamento de compras.</p>
+          <p>Assim, o estudo reforça que intervenções voltadas à organização das informações financeiras e operacionais e à construção de uma cultura de gestão orientada por indicadores podem representar um diferencial significativo para a competitividade e a sustentabilidade de micro e pequenas empresas no setor varejista. No caso analisado, a integração entre gestão financeira, controle de estoque e planejamento comercial demonstrou que o uso estruturado de dados pode transformar decisões intuitivas em estratégias gerenciais mais eficientes, contribuindo diretamente para o aumento da produtividade e para a sustentabilidade do negócio no longo prazo.</p>
+        </div>
+        <div class="artigo-section">
+          <div class="artigo-section-title">Referências</div>
+          <p style="font-size:12px;line-height:1.8">BRASIL. Ministério do Empreendedorismo, da Microempresa e da Empresa de Pequeno Porte. <em>Resultados de pesquisa nacional sobre pequenos negócios.</em> Brasília, DF, 2026.<br>
+          DANDARO, Fernando; MARTELLO, Leandro. Gestão de estoque em micro e pequenas empresas. 2015.<br>
+          SEBRAE. <em>Dados, desafios e impacto das MPEs no Brasil.</em> 2024.<br>
+          SEBRAE. <em>Maturidade digital dos pequenos negócios no Brasil 2024.</em> 2024.<br>
+          SEBRAE. <em>Guia da Metodologia ALI Produtividade – Versão 1.2.</em> Brasília: SEBRAE, 2025.<br>
+          SEBRAE. <em>Manual do Orientador – Programa ALI Produtividade.</em> Brasília: SEBRAE, 2025.<br>
+          SEBRAE. <em>Painel Inteligência Sebrae.</em> Disponível em: https://inteligencia.sebrae.com.br.</p>
+        </div>
+        <button class="pub-btn" style="margin-top:1rem" onclick="toggleArtigo('artigo1')">Fechar ↑</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTATO -->
 <section id="contato" style="padding-bottom:2rem">
   <div class="contato-bar">
@@ -431,7 +547,13 @@
       <h3>Vamos conversar?</h3>
       <p>susanverissimo@gmail.com · ALI Produtividade · Minas Gerais</p>
     </div>
-    <a href="mailto:susanverissimo@gmail.com" class="contato-link">Enviar e-mail →</a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="https://www.linkedin.com/in/susan-ver%C3%ADssimo-vasconcellos/" target="_blank" class="contato-link" style="display:inline-flex;align-items:center;gap:6px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:susanverissimo@gmail.com" class="contato-link">E-mail →</a>
+    </div>
   </div>
 </section>
 
@@ -707,13 +829,13 @@
   </div>
 </div>
 
-<!-- MODAL CASE 7 - CVEXLOG -->
+<!-- MODAL CASE 7 - TRANSPORTADORA -->
 <div class="overlay" id="modal-case7" onclick="fecharModal(event)">
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('modal-case7').classList.remove('open')">×</button>
     <span class="case-tag tag-processos" style="display:inline-block;margin-bottom:10px">Logística · Comercial</span>
-    <h2>CVEXLog Transporte</h2>
-    <div class="modal-sub">Betim, MG · ME · Jan–Jun 2025</div>
+    <h2>Transportadora e Logística</h2>
+    <div class="modal-sub">Contagem, MG · ME · Jan–Jun 2025</div>
     <div class="modal-section">
       <div class="modal-section-title">Contexto</div>
       <div class="modal-body">Empresa de transporte e logística com pouco mais de 2 anos de mercado, gerida por dois sócios e um motorista fixo. Focada em entregas rápidas com tabela de preços fixa, a gestão era predominantemente manual — planilhas simples, WhatsApp e Google Maps. O crescimento exigia estruturação comercial e financeira.</div>
@@ -761,6 +883,10 @@
 </div>
 
 <script>
+function toggleArtigo(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
 function filtrar(tipo, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
