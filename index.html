@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -218,6 +217,12 @@
   .mr { background: var(--bg); border-radius: var(--radius-sm); padding: 12px; text-align: center; }
   .mr-val { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--green); }
   .mr-desc { font-size: 10px; color: var(--text-hint); line-height: 1.3; margin-top: 2px; }
+  .radar-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+  .radar-table td { padding: 5px 8px; border-bottom: 0.5px solid var(--border); color: var(--text-muted); }
+  .radar-table td:first-child { color: var(--text-hint); }
+  .radar-table td:nth-child(2), .radar-table td:nth-child(3) { text-align: center; font-weight: 500; }
+  .radar-table td:nth-child(3) { color: var(--green); }
+  .radar-table thead td { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: .4px; color: var(--text-hint); border-bottom: 0.5px solid var(--border-med); }
 </style>
 </head>
 <body>
@@ -250,7 +255,7 @@
     </div>
     <div class="stat-divider"></div>
     <div class="stat">
-      <div class="stat-num">5</div>
+      <div class="stat-num">4</div>
       <div class="stat-label">Cases documentados</div>
     </div>
     <div class="stat-divider"></div>
@@ -283,8 +288,8 @@
       <div class="case-desc">Empresa com bom fluxo de clientes mas sem controle financeiro estruturado. Decisões de compra baseadas em percepção e capital imobilizado em estoque.</div>
       <div class="case-metrics">
         <div class="metric"><div class="metric-val">+30%</div><div class="metric-label">Produtividade</div></div>
-        <div class="metric"><div class="metric-val">R$13k</div><div class="metric-label">Pico/pessoa</div></div>
-        <div class="metric"><div class="metric-val">3→5</div><div class="metric-label">Radar</div></div>
+        <div class="metric"><div class="metric-val">3→5</div><div class="metric-label">Radar gerencial</div></div>
+        <div class="metric"><div class="metric-val">4/4</div><div class="metric-label">Ações</div></div>
       </div>
       <div class="case-footer">
         <div class="case-tools">
@@ -298,10 +303,10 @@
       <span class="case-tag tag-pessoas">Pessoas</span>
       <div class="case-title">Loja de Moda Popular</div>
       <div class="case-sub">Interior de MG · Pequena empresa · Anonimizado</div>
-      <div class="case-desc">Alto turnover de vendedoras comprometia faturamento e sobrecarregava a gestão. Ausência de processos de integração, capacitação e Visual Merchandising.</div>
+      <div class="case-desc">Alto turnover de colaboradoras comprometia faturamento e sobrecarregava a gestão. Ausência de processos de integração, capacitação e Visual Merchandising.</div>
       <div class="case-metrics">
         <div class="metric"><div class="metric-val">+288%</div><div class="metric-label">Produtividade</div></div>
-        <div class="metric"><div class="metric-val">R$10,6k</div><div class="metric-label">Por pessoa</div></div>
+        <div class="metric"><div class="metric-val">4→5</div><div class="metric-label">Radar operações</div></div>
         <div class="metric"><div class="metric-val">6/6</div><div class="metric-label">Ações</div></div>
       </div>
       <div class="case-footer">
@@ -319,7 +324,7 @@
       <div class="case-desc">Barbearia com modelo de assinatura consolidado, mas localizada em ponto com baixo fluxo espontâneo. Dependência de indicações limitava a captação de novos clientes.</div>
       <div class="case-metrics">
         <div class="metric"><div class="metric-val">+40%</div><div class="metric-label">Produtividade</div></div>
-        <div class="metric"><div class="metric-val">R$4,1k</div><div class="metric-label">Por pessoa</div></div>
+        <div class="metric"><div class="metric-val">3→5</div><div class="metric-label">Radar gerencial</div></div>
         <div class="metric"><div class="metric-val">7/7</div><div class="metric-label">Ações</div></div>
       </div>
       <div class="case-footer">
@@ -330,23 +335,7 @@
       </div>
     </div>
 
-    <div class="case-card" data-tipo="processos">
-      <span class="case-tag tag-processos">Processos · Inovação</span>
-      <div class="case-title">Mercearia e Sacolão</div>
-      <div class="case-sub">Interior de MG · Empresa familiar · Anonimizado</div>
-      <div class="case-desc">Negócio familiar de varejo de alimentos e hortifrúti com referência local. Desafio central: dependência de um único familiar na operação do açougue, gerando interrupções e sobrecarga.</div>
-      <div class="case-metrics">
-        <div class="metric"><div class="metric-val">R$11,3k</div><div class="metric-label">Por pessoa</div></div>
-        <div class="metric"><div class="metric-val">+Vendas</div><div class="metric-label">Carnes bandejadas</div></div>
-        <div class="metric"><div class="metric-val">6/7</div><div class="metric-label">Ações</div></div>
-      </div>
-      <div class="case-footer">
-        <div class="case-tools">
-          <span class="tool-sm">Radar</span><span class="tool-sm">GUTI</span><span class="tool-sm">Kit produto</span><span class="tool-sm">WhatsApp</span>
-        </div>
-        <button class="ver-btn" onclick="abrirModal('case4')">Ver detalhes →</button>
-      </div>
-    </div>
+
 
     <div class="case-card" data-tipo="processos" style="grid-column:1/-1">
       <span class="case-tag tag-digital" style="background:#EEEDFE;color:#534AB7">Transformação Digital · Comercial</span>
@@ -355,7 +344,7 @@
       <div class="case-desc">Agência com forte maturidade tecnológica em branding, identidade visual e gestão de tráfego. Sem processo estruturado de prospecção e follow-up, a conversão de novos clientes era comprometida. Solução implementada com automação via CRM, IA e discadora inteligente.</div>
       <div class="case-metrics">
         <div class="metric"><div class="metric-val">+22%</div><div class="metric-label">Produtividade</div></div>
-        <div class="metric"><div class="metric-val">R$2,5k</div><div class="metric-label">Por pessoa/mês</div></div>
+        <div class="metric"><div class="metric-val">2→3</div><div class="metric-label">Radar gerencial</div></div>
         <div class="metric"><div class="metric-val">6/6</div><div class="metric-label">Ações</div></div>
       </div>
       <div class="case-footer">
@@ -444,10 +433,19 @@
     <div class="modal-section">
       <div class="modal-section-title">Resultados obtidos</div>
       <div class="modal-results">
-        <div class="mr"><div class="mr-val">+30%</div><div class="mr-desc">Produtividade vs. referência</div></div>
-        <div class="mr"><div class="mr-val">R$13k</div><div class="mr-desc">Pico por pessoa ocupada</div></div>
-        <div class="mr"><div class="mr-val">3→5</div><div class="mr-desc">Radar gerencial</div></div>
+        <div class="mr"><div class="mr-val">+30%</div><div class="mr-desc">Produtividade</div></div>
+        <div class="mr"><div class="mr-val">R$13k</div><div class="mr-desc">Pico/pessoa</div></div>
+        <div class="mr"><div class="mr-val">4/4</div><div class="mr-desc">Ações</div></div>
       </div>
+      <table class="radar-table" style="margin-top:14px">
+        <thead><tr><td>Dimensão do Radar</td><td>Inicial</td><td>Final</td></tr></thead>
+        <tr><td>Controles gerenciais</td><td>3</td><td>5</td></tr>
+        <tr><td>Gestão das operações</td><td>3</td><td>5</td></tr>
+        <tr><td>Gestão de marketing</td><td>2</td><td>4</td></tr>
+        <tr><td>Práticas de inovação</td><td>4</td><td>4</td></tr>
+        <tr><td>Transformação digital</td><td>4</td><td>4</td></tr>
+        <tr><td>ESG</td><td>1</td><td>2</td></tr>
+      </table>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Aprendizado</div>
@@ -464,12 +462,12 @@
     <div class="modal-sub">Interior de MG · Pequena empresa · Ago–Dez 2025 · Anonimizado</div>
     <div class="modal-section">
       <div class="modal-section-title">Contexto</div>
-      <div class="modal-body">Rede regional de varejo a preço único (R$20/peça). Alta rotatividade de vendedoras comprometia o faturamento, sobrecarregava a gestão e impedia o crescimento estruturado.</div>
+      <div class="modal-body">Rede regional de varejo a preço único, com lojas em cidades do interior de MG. Alta rotatividade de colaboradoras comprometia o faturamento, sobrecarregava a gestão e impedia o crescimento estruturado.</div>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Desafios identificados</div>
       <div class="modal-bullets">
-        <div class="modal-bullet"><div class="dot-g"></div><span>Turnover alto — vendedoras saíam em menos de 3 meses</span></div>
+        <div class="modal-bullet"><div class="dot-g"></div><span>Turnover alto — colaboradoras saíam em menos de 3 meses</span></div>
         <div class="modal-bullet"><div class="dot-g"></div><span>Sem processo de integração ou capacitação padronizado</span></div>
         <div class="modal-bullet"><div class="dot-g"></div><span>Visual Merchandising inexistente (loja sem vitrine)</span></div>
         <div class="modal-bullet"><div class="dot-g"></div><span>Ausência de ações de marketing digital</span></div>
@@ -480,17 +478,26 @@
       <div class="modal-bullets">
         <div class="modal-bullet"><div class="dot-g"></div><span>Trilha de capacitação rápida em 15 dias via Sebrae Play</span></div>
         <div class="modal-bullet"><div class="dot-g"></div><span>Progressão simbólica de carreira: Júnior → Plena → Líder</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>VM com colorimetria, placas de preço único e "Tendência da Semana"</span></div>
+        <div class="modal-bullet"><div class="dot-g"></div><span>VM com uso do conhecimento interno da equipe, placas de preço único e "Tendência da Semana"</span></div>
         <div class="modal-bullet"><div class="dot-g"></div><span>Playbook operacional e roteiro de integração padronizado</span></div>
       </div>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Resultados obtidos</div>
       <div class="modal-results">
-        <div class="mr"><div class="mr-val">+288%</div><div class="mr-desc">Crescimento da produtividade</div></div>
-        <div class="mr"><div class="mr-val">R$10,6k</div><div class="mr-desc">Por pessoa em novembro</div></div>
-        <div class="mr"><div class="mr-val">6/6</div><div class="mr-desc">Ações concluídas</div></div>
+        <div class="mr"><div class="mr-val">+288%</div><div class="mr-desc">Produtividade</div></div>
+        <div class="mr"><div class="mr-val">R$10,6k</div><div class="mr-desc">Por pessoa</div></div>
+        <div class="mr"><div class="mr-val">6/6</div><div class="mr-desc">Ações</div></div>
       </div>
+      <table class="radar-table" style="margin-top:14px">
+        <thead><tr><td>Dimensão do Radar</td><td>Inicial</td><td>Final</td></tr></thead>
+        <tr><td>Controles gerenciais</td><td>3</td><td>4</td></tr>
+        <tr><td>Gestão das operações</td><td>4</td><td>5</td></tr>
+        <tr><td>Gestão de marketing</td><td>3</td><td>4</td></tr>
+        <tr><td>Práticas de inovação</td><td>3</td><td>4</td></tr>
+        <tr><td>Transformação digital</td><td>3</td><td>3</td></tr>
+        <tr><td>ESG</td><td>2</td><td>2</td></tr>
+      </table>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Aprendizado</div>
@@ -532,10 +539,19 @@
     <div class="modal-section">
       <div class="modal-section-title">Resultados obtidos</div>
       <div class="modal-results">
-        <div class="mr"><div class="mr-val">+40%</div><div class="mr-desc">Crescimento da produtividade</div></div>
-        <div class="mr"><div class="mr-val">R$4,1k</div><div class="mr-desc">Por pessoa em novembro</div></div>
-        <div class="mr"><div class="mr-val">7/7</div><div class="mr-desc">Ações concluídas</div></div>
+        <div class="mr"><div class="mr-val">+40%</div><div class="mr-desc">Produtividade</div></div>
+        <div class="mr"><div class="mr-val">R$4,1k</div><div class="mr-desc">Por pessoa</div></div>
+        <div class="mr"><div class="mr-val">7/7</div><div class="mr-desc">Ações</div></div>
       </div>
+      <table class="radar-table" style="margin-top:14px">
+        <thead><tr><td>Dimensão do Radar</td><td>Inicial</td><td>Final</td></tr></thead>
+        <tr><td>Controles gerenciais</td><td>3</td><td>5</td></tr>
+        <tr><td>Gestão das operações</td><td>3</td><td>4</td></tr>
+        <tr><td>Gestão de marketing</td><td>3</td><td>4</td></tr>
+        <tr><td>Práticas de inovação</td><td>3</td><td>3</td></tr>
+        <tr><td>Transformação digital</td><td>4</td><td>5</td></tr>
+        <tr><td>ESG</td><td>2</td><td>2</td></tr>
+      </table>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Aprendizado</div>
@@ -544,50 +560,6 @@
   </div>
 </div>
 
-<!-- MODAL CASE 4 - MERCEARIA -->
-<div class="overlay" id="modal-case4" onclick="fecharModal(event)">
-  <div class="modal">
-    <button class="modal-close" onclick="document.getElementById('modal-case4').classList.remove('open')">×</button>
-    <span class="case-tag tag-processos" style="display:inline-block;margin-bottom:10px">Processos · Inovação</span>
-    <h2>Mercearia e Sacolão</h2>
-    <div class="modal-sub">Interior de MG · Empresa familiar · Out–Dez 2025 · Anonimizado</div>
-    <div class="modal-section">
-      <div class="modal-section-title">Contexto</div>
-      <div class="modal-body">Negócio familiar de varejo de alimentos e hortifrúti com clientela fiel e referência consolidada no bairro. Operado pela empresária, familiar responsável pelo açougue e mais dois colaboradores. Desafio central era a dependência total de um único familiar na operação do açougue.</div>
-    </div>
-    <div class="modal-section">
-      <div class="modal-section-title">Desafios identificados</div>
-      <div class="modal-bullets">
-        <div class="modal-bullet"><div class="dot-g"></div><span>Dependência de um único familiar no açougue — score 625 na GUTI</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Perdas recorrentes no hortifrúti por ausência de estratégias de reaproveitamento</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Sobrecarga administrativa concentrada na empresária</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Precificação intuitiva sem método estruturado</span></div>
-      </div>
-    </div>
-    <div class="modal-section">
-      <div class="modal-section-title">Soluções implementadas</div>
-      <div class="modal-bullets">
-        <div class="modal-bullet"><div class="dot-g"></div><span>Teste de carnes bandejadas para pronta entrega sem atendimento presencial</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Divulgação das novidades no grupo de clientes do WhatsApp</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Oferta de carnes porcionadas em bandejas ampliando vendas em horários de ausência</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Desenho do cargo de assistente administrativo para descentralizar tarefas</span></div>
-        <div class="modal-bullet"><div class="dot-g"></div><span>Participação em consultorias financeira e de marketing do Sebrae</span></div>
-      </div>
-    </div>
-    <div class="modal-section">
-      <div class="modal-section-title">Resultados obtidos</div>
-      <div class="modal-results">
-        <div class="mr"><div class="mr-val">R$11,3k</div><div class="mr-desc">Produtividade por pessoa</div></div>
-        <div class="mr"><div class="mr-val">+Vendas</div><div class="mr-desc">Carnes bandejadas aceitas</div></div>
-        <div class="mr"><div class="mr-val">6/7</div><div class="mr-desc">Ações concluídas</div></div>
-      </div>
-    </div>
-    <div class="modal-section">
-      <div class="modal-section-title">Aprendizado</div>
-      <div class="modal-body">Inovações simples no modelo de oferta — como bandejamento de produtos — podem resolver desafios complexos de dependência operacional, mantendo vendas mesmo em momentos de ausência de pessoas-chave.</div>
-    </div>
-  </div>
-</div>
 
 <!-- MODAL CASE 5 - AGÊNCIA -->
 <div class="overlay" id="modal-case5" onclick="fecharModal(event)">
@@ -622,10 +594,19 @@
     <div class="modal-section">
       <div class="modal-section-title">Resultados obtidos</div>
       <div class="modal-results">
-        <div class="mr"><div class="mr-val">+22%</div><div class="mr-desc">Crescimento da produtividade</div></div>
-        <div class="mr"><div class="mr-val">R$2,5k</div><div class="mr-desc">Por pessoa/mês</div></div>
-        <div class="mr"><div class="mr-val">6/6</div><div class="mr-desc">Ações concluídas</div></div>
+        <div class="mr"><div class="mr-val">+22%</div><div class="mr-desc">Produtividade</div></div>
+        <div class="mr"><div class="mr-val">R$2,5k</div><div class="mr-desc">Por pessoa</div></div>
+        <div class="mr"><div class="mr-val">6/6</div><div class="mr-desc">Ações</div></div>
       </div>
+      <table class="radar-table" style="margin-top:14px">
+        <thead><tr><td>Dimensão do Radar</td><td>Inicial</td><td>Final</td></tr></thead>
+        <tr><td>Controles gerenciais</td><td>2</td><td>3</td></tr>
+        <tr><td>Gestão das operações</td><td>4</td><td>4</td></tr>
+        <tr><td>Gestão de marketing</td><td>4</td><td>4</td></tr>
+        <tr><td>Práticas de inovação</td><td>3</td><td>4</td></tr>
+        <tr><td>Transformação digital</td><td>5</td><td>5</td></tr>
+        <tr><td>ESG</td><td>2</td><td>2</td></tr>
+      </table>
     </div>
     <div class="modal-section">
       <div class="modal-section-title">Aprendizado</div>
